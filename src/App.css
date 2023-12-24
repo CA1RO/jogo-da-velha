@@ -4,6 +4,8 @@
 
 body {
     margin: 0;
-    background-color: #fff;
+    background-color: #861100;
+    background-image: url('C:\Users\rafae\Desktop\PT_ORC\jogo-da-velha sub\imagens]\Bandeira machadambar dupla.png') ;
+    background-size: cover  ;
     font-family: 'Courier New', Courier, monospace;
 }
