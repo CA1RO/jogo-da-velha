@@ -5,6 +5,7 @@ import './App.css'
 import {Tabuleiro} from "./components/Tabuleiro"
 import { Pontuacao } from "./components/Pontuacao";
 import { BotaoRecomeca } from "./components/BotaoRecomeca";
+import { ZerarPontuacao } from "./components/ZerarPontuacao";
 
 function App() {
 
@@ -66,12 +67,24 @@ function App() {
     setFimdeJogo(false)
     setTabuleiro(Array(9).fill(null))
   }
+  const zerarJogo = (updatedTabuleiro) => {
+    setFimdeJogo(false)
+    setTabuleiro(Array(9).fill(null))
+    let {oPontos} = pontos;
+    oPontos = 0
+    setPontos({...pontos, oPontos})
+    let {xPontos} = pontos;
+    xPontos = 0
+    setPontos({...pontos, xPontos})
+   
 
+  }
   return (
     <div className='App'>
       <Pontuacao pontos={pontos} xJogando={xJogando}/>
       <Tabuleiro tabuleiro={tabuleiro} onClick={fimdeJogo ? recomecarJogo : handleCelulaClick} />
-      <BotaoRecomeca recomecarJogo={recomecarJogo} />      
+      <BotaoRecomeca recomecarJogo={recomecarJogo} /> 
+      <ZerarPontuacao zerarJogo={zerarJogo}/>     
     </div>
   )
 
