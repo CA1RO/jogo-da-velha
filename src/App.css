@@ -5,7 +5,7 @@
 body {
     margin: 0;
     background-color: #861100;
-    background-image: url('C:\Users\rafae\Desktop\PT_ORC\jogo-da-velha sub\imagens]\machadambar duplo.jpg') ;
+    background-image: url('.\imagens\machadambar duplo.jpg');
     background-size: cover  ;
     font-family: 'Courier New', Courier, monospace;
 }
