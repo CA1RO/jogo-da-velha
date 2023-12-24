@@ -36,7 +36,7 @@ function App() {
     const ganhador = checkVitoria(updatedTabuleiro);
 
     if(ganhador) {
-      if (ganhador === "0") {
+      if (ganhador === "O") {
         let {oPontos} = pontos;
         oPontos += 1
         setPontos({...pontos, oPontos})
